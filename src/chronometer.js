@@ -42,6 +42,13 @@ class Chronometer {
 
   computeTwoDigitNumber(value) {
     // ... your code goes here
+    const digits = value.toString().slice();
+    if (digits.length === 2) {
+      return digits[0] + digits[1];
+    }
+    else {
+      return "0" + digits[0];
+    }
   }
 
   stop() {
