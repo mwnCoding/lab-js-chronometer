@@ -22,6 +22,7 @@ class Chronometer {
 
   getSeconds() {
     // ... your code goes here
+    return Math.floor((this.currentTime % 6000) / 100);
   }
 
   getCentiseconds() {
