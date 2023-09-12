@@ -27,10 +27,16 @@ class Chronometer {
 
   getCentiseconds() {
     // ... your code goes here
+    return (this.currentTime % 6000) % 100;
   }
 
   computeTwoDigitNumber(value) {
     // ... your code goes here
+    const digits = value.toString().split('');
+    if (digits.length === 1) {
+      digits.unshift("0");
+    }
+    return digits.join('');
   }
 
   stop() {
