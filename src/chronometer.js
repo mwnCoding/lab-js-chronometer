@@ -8,7 +8,7 @@ class Chronometer {
   start(printTimeCallback) {
     // ... your code goes here
   
-    const intervalId = setInterval(() => {
+    this.intervalId = setInterval(() => {
       this.currentTime += 1;
       console.log(this.currentTime);
       if (printTimeCallback) {
@@ -53,13 +53,19 @@ class Chronometer {
 
   stop() {
     // ... your code goes here
+    clearInterval(this.intervalId);
   }
 
   reset() {
     // ... your code goes here
+    this.currentTime = 0;
   }
 
   split() {
     // ... your code goes here
   }
 }
+
+const chrono = new Chronometer();
+chrono.start();
+chrono.stop();
