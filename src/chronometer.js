@@ -32,6 +32,12 @@ class Chronometer {
 
   getSeconds() {
     // ... your code goes here
+    if (this.currentTime !== 0) {
+      return this.currentTime % 60;
+    }
+    else {
+      return 0;
+    }
   }
 
   computeTwoDigitNumber(value) {
